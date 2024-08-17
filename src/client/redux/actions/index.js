@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { addNewTodo, getAllTodo, toggletodo, updatetodo, deletetodo } from "../reducer/todosReducer"; // Import the actions from the slice
 
-const API_URL = 'http://localhost:8000';
+const API_URL = 'http://localhost:8000' || 'todowebapp-livid.vercel.app';
 
 export const addNewTodoAsync = (data) => async (dispatch) => {
     try {
