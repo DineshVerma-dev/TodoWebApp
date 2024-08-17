@@ -6,17 +6,17 @@ import bodyParser from 'body-parser';
 
 const app =  express();
 
-const PORT = process.env.PORT || 8000 || todowebapp-livid.vercel.app;
+const PORT = 8000 || todowebapp-livid.vercel.app;
 
 Connection();
 
 
 
-const corsOptions = {
-    origin: 'https://todowebapp-livid.vercel.app',
-  };
+// const corsOptions = {
+//     origin: 'https://todowebapp-livid.vercel.app',
+//   };
   
-  app.use(cors(corsOptions));
+  app.use(cors());
 app.use(bodyParser.json({ extended : true}));
 app.use(bodyParser.urlencoded({ extended : true}));
 
