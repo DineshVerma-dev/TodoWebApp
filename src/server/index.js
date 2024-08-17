@@ -10,7 +10,13 @@ const PORT = process.env.PORT || 8000 || todowebapp-livid.vercel.app;
 
 Connection();
 
-app.use(cors());
+
+
+const corsOptions = {
+    origin: 'https://todowebapp-livid.vercel.app',
+  };
+  
+  app.use(cors(corsOptions));
 app.use(bodyParser.json({ extended : true}));
 app.use(bodyParser.urlencoded({ extended : true}));
 
